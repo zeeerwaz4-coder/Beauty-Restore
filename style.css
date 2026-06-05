@@ -1,1 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
 
+body {
+  background: #0b0f1a;
+  color: white;
+}
+
+/* TOP */
+.topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+}
+
+.logo {
+  position: absolute;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  background: #1e90ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+}
+
+/* CANVAS */
+.canvas {
+  width: 92%;
+  height: 220px;
+  margin: 10px auto;
+  background: #111827;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INPUT */
+.inputBox {
+  width: 92%;
+  margin: auto;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 12px;
+  background: #1f2937;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+/* FLOAT */
+.floatAI {
+  position: fixed;
+  left: 15px;
+  bottom: 180px;
+  width: 55px;
+  height: 55px;
+  background: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SCROLL */
+.scrollRow {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  min-width: 80px;
+  height: 80px;
+  background: #1f2937;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BOTTOM */
+.bottomTools {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #0f172a;
+}
+
+.toolsScroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.tool {
+  min-width: 90px;
+  height: 60px;
+  background: #111827;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
