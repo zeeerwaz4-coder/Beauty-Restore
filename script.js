@@ -1,22 +1,17 @@
-const tools = document.getElementById("tools");
+const input = document.querySelector("input");
+const aiButton = document.querySelector(".floatAI");
 
-let isDown = false;
-let startX;
-let scrollLeft;
+aiButton.addEventListener("click", async () => {
+  const message = input.value;
 
-tools.addEventListener("mousedown", (e) => {
-  isDown = true;
-  startX = e.pageX - tools.offsetLeft;
-  scrollLeft = tools.scrollLeft;
-});
+  const response = await fetch("/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message })
+  });
 
-tools.addEventListener("mouseup", () => isDown = false);
-tools.addEventListener("mouseleave", () => isDown = false);
-
-tools.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - tools.offsetLeft;
-  const walk = (x - startX) * 2;
-  tools.scrollLeft = scrollLeft - walk;
+  const data = await response.json();
+  alert(data.reply);
 });
